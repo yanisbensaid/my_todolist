@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Le numérique</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="file.css">
+</head>
+<body>
+    <!-- Haut de Page -->
+    <header>
+        <p>
+            My todo list
+        </p>
+    </header>
+    <!-- Menu de navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li>
+                    <a>Modifier</a>
+                    <ul>
+                        <li><button class="action-button" onclick="markAllTasksCompleted()">Marquer toutes les tâches comme terminées</button></li>
+                        <li><button class="action-button" onclick="deleteAllCompletedTasks()">Supprimer toutes les tâches terminées</button></li>
+                        <li><button class="action-button" onclick="deleteAllTasks()">Effacer toutes les tâches</button></li>  
+                    </ul>
+                </li>
+                <li>
+                    <a>Affichage</a>
+                    <ul>
+                        <li><button class="action-button" onclick="showOnlyPriorityTasks()">Afficher que les tâches prioritaires</button></li>
+                        <li><button class="action-button" onclick="showAlltasks()">Afficher toutes les tâches</button></li>
+                        <li><button class="action-button" onclick="showOnlyFinishTasks()">Afficher que les tâches non terminées</button></li>  
+                    </ul>
+                </li>
+                <li><a href="#" id="loginBtn">Connexion</a></li> <!-- Changement ici -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenue sous forme de boîte  -->
+    <p class="intro">
+        Bienvenue sur notre site web, ici vous pourrez gérer vos tâches
+    </p>
+    <div id="content">
+        <div class="leftbox">
+            <!-- <img src="img/background.jpg"> -->
+        </div>
+        <div class="rightbox">
+            <input type="text" id="taskInput" placeholder="Ajouter une tâche...">
+            <button onclick="addTask()">Ajouter</button>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+    <!-- Pied de Page -->
+    <footer>
+        <p>
+            Copyright &copy; BEN SAID Yanis, MOUMEN EL Mehdi et l'autre golmon - 2024 - All Right Reserved
+        </p>
+    </footer>
+    <!-- Structure de la fenêtre modale de connexion -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Inscription</p>
+            <form>
+                <label for="firstName">Prénom:</label><br>
+                <input type="text" id="firstName" name="firstName"><br>
+                <label for="lastName">Nom de famille:</label><br>
+                <input type="text" id="lastName" name="lastName"><br>
+                <label for="email">Adresse email:</label><br>
+                <input type="text" id="email" name="email"><br>
+                <label for="password">Mot de passe:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="S'inscrire">
+            </form>
+            <p href="#" id="loginLink">Vous avez déjà un compte, connectez-vous !</p>
+        </div>
+    </div>
+    <!-- Structure de la fenêtre modale de connexion -->
+    <div id="loginModal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Connexion</p>
+            <form>
+                <label for="email">Adresse email:</label><br>
+                <input type="text" id="loginEmail" name="email"><br>
+                <label for="password">Mot de passe:</label><br>
+                <input type="password" id="loginPassword" name="password"><br><br>
+                <input type="submit" value="Se connecter">
+            </form>
+        </div>
+    </div>
+
+    <script src="file.js"></script>
+</body>
+</html>

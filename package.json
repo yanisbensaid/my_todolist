@@ -1,0 +1,28 @@
+{
+  "name": "epytodo",
+  "version": "1.0.0",
+  "description": "Project -> back-end of a todo-list site",
+  "main": "index.js",
+  "scripts": {
+    "dependencies_installer": "cd useful_sh_command && chmod +x perm.sh && ./perm.sh && ./dependencies.sh",
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EpitechPromo2028/B-WEB-200-MPL-2-1-epytodo-el-mehdi.moumen.git"
+  },
+  "author": "El Mehdi MOUMEN | Yanis Ben-Said | Sefkan AYDOGDU",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EpitechPromo2028/B-WEB-200-MPL-2-1-epytodo-el-mehdi.moumen/issues"
+  },
+  "homepage": "https://github.com/EpitechPromo2028/B-WEB-200-MPL-2-1-epytodo-el-mehdi.moumen#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.9.7"
+  }
+}
